@@ -2,17 +2,14 @@
 <html>
 
 <!-- HEADER -->
-
-<!-- Borksy 4.6 -->
-<!-- Bitsy 7.10 -->
 <head>
 
 <meta charset="UTF-8">
 
-<title>Desert Level</title>
+<title>las_vegas_stroll</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
-Las Vegas Stroll
+las_vegas_stroll
 
 # BITSY VERSION 7.10
 
@@ -58,7 +55,7 @@ c,a,k,0,0,0,0,0,0,0,0,0,0,0,0,c
 c,0,0,0,0,0,0,0,0,0,0,0,0,0,0,c
 c,0,0,0,0,0,0,0,0,0,0,0,0,0,0,c
 c,0,0,0,0,0,0,0,0,0,0,0,0,0,0,c
-c,0,0,0,0,0,0,0,j,0,0,0,0,0,0,c
+c,0,0,0,0,0,l,0,0,0,0,0,0,0,0,c
 c,0,0,0,0,0,0,0,0,0,0,0,0,0,0,c
 c,0,0,0,0,0,0,0,0,0,0,0,0,0,0,c
 c,c,c,c,c,c,c,c,j,c,c,c,c,c,c,c
@@ -473,6 +470,7 @@ TIL l
 11111111
 11111111
 NAME block
+WAL true
 
 TIL m
 10000001
@@ -885,7 +883,6 @@ SPR a
 00110100
 NAME cat
 DLG 0
-POS 0 8,12
 
 SPR b
 00000000
@@ -896,6 +893,7 @@ SPR b
 00000000
 00000000
 00000000
+POS 0 6,12
 
 SPR c
 00000000
@@ -907,7 +905,6 @@ SPR c
 00111100
 00110100
 NAME dog
-POS 0 6,12
 
 SPR prefixA
 00011000
@@ -1326,6 +1323,17 @@ NAME Player 5
 DLG sqc
 POS prefix3 12,14
 
+SPR prefixd
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME erase
+
 ITM 0
 00000000
 00000000
@@ -1614,7 +1622,7 @@ body {
 	margin:0px;
 	padding:0px;
 	overflow:hidden;
-	background:#000;
+	background:#ffffff;
 }
 
 #game {
@@ -1623,15 +1631,7 @@ body {
 	max-width:100vh;
 	margin:auto;
 	display:block;
-	touch-action: none; /* fixing touch-input errors in chrome */
-
-	/* sharp pixel edges */
-	/* https://caniuse.com/#search=image-render */
-  	-ms-interpolation-mode: nearest-neighbor; /* IE */
-  	image-rendering: -moz-crisp-edges; /* FF 6.0+ */
-  	image-rendering: pixelated; /* Chrome, Safari */
 }
-
 </style>
 
 <!-- SCRIPTS -->
@@ -8324,7 +8324,6 @@ bitsyOnLoad(load_game);
 </script>
 
 <!-- store default font in separate script tag for back compat-->
-<!-- Borksy modification: uses better encoded default font. -->
 <script type="text/bitsyFontData" id="ascii_small">
 FONT ascii_small
 SIZE 6 8
@@ -8335,6 +8334,285 @@ CHAR 0
 000000
 000000
 000000
+000000
+000000
+CHAR 1
+001110
+010001
+011011
+010001
+010101
+010001
+001110
+000000
+CHAR 2
+001110
+011111
+010101
+011111
+010001
+011111
+001110
+000000
+CHAR 3
+000000
+001010
+011111
+011111
+011111
+001110
+000100
+000000
+CHAR 4
+000000
+000000
+001010
+001110
+001110
+000100
+000000
+000000
+CHAR 5
+000100
+001110
+001110
+000100
+011111
+011111
+000100
+000000
+CHAR 6
+000000
+000100
+001110
+011111
+011111
+000100
+001110
+000000
+CHAR 7
+000000
+000000
+000000
+001100
+001100
+000000
+000000
+000000
+CHAR 8
+111111
+111111
+111111
+110011
+110011
+111111
+111111
+111111
+CHAR 9
+000000
+000000
+011110
+010010
+010010
+011110
+000000
+000000
+CHAR 10
+111111
+111111
+100001
+101101
+101101
+100001
+111111
+111111
+CHAR 11
+000000
+000111
+000011
+001101
+010010
+010010
+001100
+000000
+CHAR 12
+001110
+010001
+010001
+001110
+000100
+001110
+000100
+000000
+CHAR 13
+000100
+000110
+000101
+000100
+001100
+011100
+011000
+000000
+CHAR 14
+000011
+001101
+001011
+001101
+001011
+011011
+011000
+000000
+CHAR 15
+000000
+010101
+001110
+011011
+001110
+010101
+000000
+000000
+CHAR 16
+001000
+001100
+001110
+001111
+001110
+001100
+001000
+000000
+CHAR 17
+000010
+000110
+001110
+011110
+001110
+000110
+000010
+000000
+CHAR 18
+000100
+001110
+011111
+000100
+011111
+001110
+000100
+000000
+CHAR 19
+001010
+001010
+001010
+001010
+001010
+000000
+001010
+000000
+CHAR 20
+001111
+010101
+010101
+001101
+000101
+000101
+000101
+000000
+CHAR 21
+001110
+010001
+001100
+001010
+000110
+010001
+001110
+000000
+CHAR 22
+000000
+000000
+000000
+000000
+000000
+011110
+011110
+000000
+CHAR 23
+000100
+001110
+011111
+000100
+011111
+001110
+000100
+001110
+CHAR 24
+000100
+001110
+011111
+000100
+000100
+000100
+000100
+000000
+CHAR 25
+000100
+000100
+000100
+000100
+011111
+001110
+000100
+000000
+CHAR 26
+000000
+000100
+000110
+011111
+000110
+000100
+000000
+000000
+CHAR 27
+000000
+000100
+001100
+011111
+001100
+000100
+000000
+000000
+CHAR 28
+000000
+000000
+000000
+010000
+010000
+010000
+011111
+000000
+CHAR 29
+000000
+001010
+001010
+011111
+001010
+001010
+000000
+000000
+CHAR 30
+000100
+000100
+001110
+001110
+011111
+011111
+000000
+000000
+CHAR 31
+011111
+011111
+001110
+001110
+000100
+000100
 000000
 000000
 CHAR 32
@@ -9184,33 +9462,267 @@ CHAR 125
 001100
 000000
 CHAR 126
-000000
-000000
-000000
 001010
 010100
 000000
 000000
 000000
-CHAR 160
 000000
 000000
 000000
-000000
-000000
-000000
-000000
-000000
-CHAR 161
-000100
-000000
-000100
+CHAR 127
 000100
 001110
+011011
+010001
+010001
+011111
+000000
+000000
+CHAR 128
+001110
+010001
+010000
+010000
+010001
 001110
 000100
+001100
+CHAR 129
+010010
 000000
-CHAR 162
+010010
+010010
+010010
+010110
+001010
+000000
+CHAR 130
+000011
+000000
+001110
+010001
+011110
+010000
+001110
+000000
+CHAR 131
+001110
+000000
+001110
+000001
+001111
+010001
+001111
+000000
+CHAR 132
+001010
+000000
+001110
+000001
+001111
+010001
+001111
+000000
+CHAR 133
+001100
+000000
+001110
+000001
+001111
+010001
+001111
+000000
+CHAR 134
+001110
+001010
+001110
+000001
+001111
+010001
+001111
+000000
+CHAR 135
+000000
+001110
+010001
+010000
+010001
+001110
+000100
+001100
+CHAR 136
+001110
+000000
+001110
+010001
+011110
+010000
+001110
+000000
+CHAR 137
+001010
+000000
+001110
+010001
+011110
+010000
+001110
+000000
+CHAR 138
+001100
+000000
+001110
+010001
+011110
+010000
+001110
+000000
+CHAR 139
+001010
+000000
+000100
+000100
+000100
+000100
+000110
+000000
+CHAR 140
+000100
+001010
+000000
+000100
+000100
+000100
+000110
+000000
+CHAR 141
+001000
+000000
+000100
+000100
+000100
+000100
+000110
+000000
+CHAR 142
+001010
+000000
+000100
+001010
+010001
+011111
+010001
+000000
+CHAR 143
+001110
+001010
+001110
+011011
+010001
+011111
+010001
+000000
+CHAR 144
+000011
+000000
+011111
+010000
+011110
+010000
+011111
+000000
+CHAR 145
+000000
+000000
+011110
+000101
+011111
+010100
+001111
+000000
+CHAR 146
+001111
+010100
+010100
+011111
+010100
+010100
+010111
+000000
+CHAR 147
+001110
+000000
+001100
+010010
+010010
+010010
+001100
+000000
+CHAR 148
+001010
+000000
+001100
+010010
+010010
+010010
+001100
+000000
+CHAR 149
+011000
+000000
+001100
+010010
+010010
+010010
+001100
+000000
+CHAR 150
+001110
+000000
+010010
+010010
+010010
+010110
+001010
+000000
+CHAR 151
+011000
+000000
+010010
+010010
+010010
+010110
+001010
+000000
+CHAR 152
+001010
+000000
+010010
+010010
+010010
+001110
+000100
+011000
+CHAR 153
+010010
+001100
+010010
+010010
+010010
+010010
+001100
+000000
+CHAR 154
+001010
+000000
+010010
+010010
+010010
+010010
+001100
+000000
+CHAR 155
 000000
 000100
 001110
@@ -9219,7 +9731,7 @@ CHAR 162
 001110
 000100
 000000
-CHAR 163
+CHAR 156
 000110
 001001
 001000
@@ -9228,7 +9740,7 @@ CHAR 163
 001001
 010111
 000000
-CHAR 165
+CHAR 157
 010001
 001010
 000100
@@ -9236,26 +9748,116 @@ CHAR 165
 000100
 011111
 000100
+000000
+CHAR 158
+011000
+010100
+010100
+011010
+010111
+010010
+010010
+000000
+CHAR 159
+000010
+000101
+000100
+001110
+000100
+000100
+010100
+001000
+CHAR 160
+000110
+000000
+001110
+000001
+001111
+010001
+001111
+000000
+CHAR 161
+000110
+000000
+000100
+000100
+000100
+000100
+000110
+000000
+CHAR 162
+000110
+000000
+001100
+010010
+010010
+010010
+001100
+000000
+CHAR 163
+000110
+000000
+010010
+010010
+010010
+010110
+001010
+000000
+CHAR 164
+001010
+010100
+000000
+011100
+010010
+010010
+010010
+000000
+CHAR 165
+001010
+010100
+000000
+010010
+011010
+010110
+010010
+000000
+CHAR 166
+001110
+000001
+001111
+010001
+001111
+000000
+001111
 000000
 CHAR 167
-001110
-010001
 001100
-001010
-000110
+010010
+010010
+010010
+001100
+000000
+011110
+000000
+CHAR 168
+000100
+000000
+000100
+001100
+010000
 010001
 001110
 000000
-CHAR 171
+CHAR 169
 000000
 000000
-001001
-010010
-001001
+011111
+010000
+010000
+010000
 000000
 000000
-000000
-CHAR 172
+CHAR 170
 000000
 000000
 111111
@@ -9264,24 +9866,96 @@ CHAR 172
 000000
 000000
 000000
+CHAR 171
+010000
+010010
+010100
+001110
+010001
+000010
+000111
+000000
+CHAR 172
+010000
+010010
+010100
+001011
+010101
+000111
+000001
+000000
+CHAR 173
+000100
+000000
+000100
+000100
+001110
+001110
+000100
+000000
+CHAR 174
+000000
+000000
+001001
+010010
+001001
+000000
+000000
+000000
+CHAR 175
+000000
+000000
+010010
+001001
+010010
+000000
+000000
+000000
+CHAR 176
+010101
+000000
+101010
+000000
+010101
+000000
+101010
+000000
 CHAR 177
-000000
-000100
-001110
-000100
-000000
-001110
-000000
-000000
+010101
+101010
+010101
+101010
+010101
+101010
+010101
+101010
 CHAR 178
-011000
+101010
+111111
+010101
+111111
+101010
+111111
+010101
+111111
+CHAR 179
 000100
-001000
-011100
-000000
-000000
-000000
-000000
+000100
+000100
+000100
+000100
+000100
+000100
+000100
+CHAR 180
+000100
+000100
+000100
+111100
+000100
+000100
+000100
+000100
 CHAR 181
 000000
 000000
@@ -9292,123 +9966,393 @@ CHAR 181
 010000
 010000
 CHAR 182
-001111
-010101
-010101
-001101
-000101
-000101
-000101
+010100
+010100
+010100
+110100
+010100
+010100
+010100
+010100
+CHAR 183
 000000
+000000
+000000
+111100
+010100
+010100
+010100
+010100
+CHAR 184
+000000
+111100
+000100
+111100
+000100
+000100
+000100
+000100
+CHAR 185
+010100
+110100
+000100
+110100
+010100
+010100
+010100
+010100
+CHAR 186
+010100
+010100
+010100
+010100
+010100
+010100
+010100
+010100
 CHAR 187
 000000
-000000
-010010
-001001
-010010
-000000
-000000
-000000
-CHAR 188
-010000
-010010
+111100
+000100
+110100
 010100
-001011
-010101
-000111
-000001
+010100
+010100
+010100
+CHAR 188
+010100
+110100
+000100
+111100
+000000
+000000
+000000
 000000
 CHAR 189
-010000
-010010
 010100
-001110
-010001
-000010
-000111
+010100
+010100
+111100
+000000
+000000
+000000
+000000
+CHAR 190
+000100
+111100
+000100
+111100
+000000
+000000
+000000
 000000
 CHAR 191
-000100
 000000
-000100
-001100
-010000
-010001
-001110
 000000
+000000
+111100
+000100
+000100
+000100
+000100
+CHAR 192
+000100
+000100
+000100
+000111
+000000
+000000
+000000
+000000
+CHAR 193
+000100
+000100
+000100
+111111
+000000
+000000
+000000
+000000
+CHAR 194
+000000
+000000
+000000
+111111
+000100
+000100
+000100
+000100
+CHAR 195
+000100
+000100
+000100
+000111
+000100
+000100
+000100
+000100
 CHAR 196
-001010
 000000
-000100
-001010
-010001
-011111
-010001
+000000
+000000
+111111
+000000
+000000
+000000
 000000
 CHAR 197
-001110
-001010
-001110
-011011
-010001
-011111
-010001
-000000
+000100
+000100
+000100
+111111
+000100
+000100
+000100
+000100
 CHAR 198
-001111
+000100
+000111
+000100
+000111
+000100
+000100
+000100
+000100
+CHAR 199
 010100
-010100
-011111
 010100
 010100
 010111
+010100
+010100
+010100
+010100
+CHAR 200
+010100
+010111
+010000
+011111
 000000
-CHAR 199
-001110
-010001
-010000
-010000
-010001
-001110
-000100
-001100
+000000
+000000
+000000
 CHAR 201
-000011
 000000
 011111
 010000
-011110
+010111
+010100
+010100
+010100
+010100
+CHAR 202
+010100
+110111
+000000
+111111
+000000
+000000
+000000
+000000
+CHAR 203
+000000
+111111
+000000
+110111
+010100
+010100
+010100
+010100
+CHAR 204
+010100
+010111
 010000
-011111
+010111
+010100
+010100
+010100
+010100
+CHAR 205
+000000
+111111
+000000
+111111
+000000
+000000
+000000
+000000
+CHAR 206
+010100
+110111
+000000
+110111
+010100
+010100
+010100
+010100
+CHAR 207
+000100
+111111
+000000
+111111
+000000
+000000
+000000
+000000
+CHAR 208
+010100
+010100
+010100
+111111
+000000
+000000
+000000
 000000
 CHAR 209
-001010
+000000
+111111
+000000
+111111
+000100
+000100
+000100
+000100
+CHAR 210
+000000
+000000
+000000
+111111
 010100
+010100
+010100
+010100
+CHAR 211
+010100
+010100
+010100
+011111
 000000
-010010
-011010
-010110
-010010
 000000
+000000
+000000
+CHAR 212
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+111111
+CHAR 213
+000000
+000000
+000000
+000000
+000000
+000000
+111111
+111111
 CHAR 214
-010010
-001100
-010010
-010010
-010010
-010010
-001100
 000000
+000000
+000000
+000000
+000000
+111111
+111111
+111111
+CHAR 215
+000000
+000000
+000000
+000000
+111111
+111111
+111111
+111111
+CHAR 216
+000000
+000000
+000000
+111111
+111111
+111111
+111111
+111111
+CHAR 217
+000000
+000000
+111111
+111111
+111111
+111111
+111111
+111111
+CHAR 218
+000000
+111111
+111111
+111111
+111111
+111111
+111111
+111111
+CHAR 219
+111111
+111111
+111111
+111111
+111111
+111111
+111111
+111111
 CHAR 220
-001010
-000000
-010010
-010010
-010010
-010010
-001100
-000000
+100000
+100000
+100000
+100000
+100000
+100000
+100000
+100000
+CHAR 221
+110000
+110000
+110000
+110000
+110000
+110000
+110000
+110000
+CHAR 222
+111000
+111000
+111000
+111000
+111000
+111000
+111000
+111000
 CHAR 223
+111100
+111100
+111100
+111100
+111100
+111100
+111100
+111100
+CHAR 224
+111110
+111110
+111110
+111110
+111110
+111110
+111110
+111110
+CHAR 225
 000000
 011100
 010010
@@ -9417,32 +10361,23 @@ CHAR 223
 010010
 011100
 010000
-CHAR 224
-001100
-000000
-001110
-000001
-001111
-010001
-001111
-000000
-CHAR 225
-000110
-000000
-001110
-000001
-001111
-010001
-001111
-000000
 CHAR 226
-001110
+011110
+010010
+010000
+010000
+010000
+010000
+010000
 000000
-001110
-000001
-001111
-010001
-001111
+CHAR 227
+000000
+011111
+001010
+001010
+001010
+001010
+001010
 000000
 CHAR 228
 001010
@@ -9454,187 +10389,214 @@ CHAR 228
 001111
 000000
 CHAR 229
-001110
-001010
-001110
-000001
+000000
+000000
 001111
-010001
-001111
+010010
+010010
+001100
+000000
 000000
 CHAR 230
 000000
 000000
-011110
-000101
-011111
-010100
-001111
-000000
+010010
+010010
+010010
+011100
+010000
+010000
 CHAR 231
 000000
+000000
+001010
+010100
+000100
+000100
+000100
+000000
+CHAR 232
 001110
-010001
-010000
+000100
+001110
 010001
 001110
 000100
-001100
-CHAR 232
-001100
-000000
-001110
-010001
-011110
-010000
 001110
 000000
 CHAR 233
-000011
-000000
-001110
-010001
+001100
+010010
+010010
 011110
-010000
-001110
+010010
+010010
+001100
 000000
 CHAR 234
-001110
 000000
 001110
 010001
-011110
-010000
-001110
+010001
+001010
+001010
+011011
 000000
 CHAR 235
+001100
+010000
+001000
+000100
+001110
+010010
+001100
+000000
+CHAR 236
+000000
+000000
+001010
+010101
+010101
 001010
 000000
+000000
+CHAR 237
+000000
+000100
 001110
-010001
+010101
+010101
+001110
+000100
+000000
+CHAR 238
+000000
+001110
+010000
 011110
 010000
 001110
 000000
-CHAR 236
-001000
-000000
-000100
-000100
-000100
-000100
-000110
-000000
-CHAR 237
-000110
-000000
-000100
-000100
-000100
-000100
-000110
-000000
-CHAR 238
-000100
-001010
-000000
-000100
-000100
-000100
-000110
 000000
 CHAR 239
-001010
 000000
-000100
-000100
-000100
-000100
-000110
+001100
+010010
+010010
+010010
+010010
+000000
+000000
+CHAR 240
+000000
+011110
+000000
+011110
+000000
+011110
+000000
 000000
 CHAR 241
-001010
-010100
 000000
-011100
-010010
-010010
-010010
+000100
+001110
+000100
 000000
-CHAR 242
-011000
-000000
-001100
-010010
-010010
-010010
-001100
-000000
-CHAR 243
-000110
-000000
-001100
-010010
-010010
-010010
-001100
-000000
-CHAR 244
 001110
 000000
+000000
+CHAR 242
+010000
 001100
-010010
-010010
-010010
+000010
 001100
+010000
+000000
+011110
+000000
+CHAR 243
+000000
+000000
+111111
+111000
+100110
+100001
+100000
+111111
+CHAR 244
+000000
+000000
+111111
+000111
+011001
+100001
+000001
+111111
+CHAR 245
+000100
+000100
+000100
+000100
+000100
+010100
+001000
 000000
 CHAR 246
 001010
 000000
-001100
-010010
-010010
-010010
-001100
+001110
+010001
+010001
+010001
+001110
 000000
 CHAR 247
-001010
-000000
-001110
-010001
-010001
-010001
-001110
-000000
+111110
+111110
+111110
+111110
+111110
+111110
+111110
+111110
+CHAR 248
+111100
+111100
+111100
+111100
+111100
+111100
+111100
+111100
 CHAR 249
-011000
-000000
-010010
-010010
-010010
-010110
-001010
-000000
+111000
+111000
+111000
+111000
+111000
+111000
+111000
+111000
 CHAR 250
-000110
-000000
-010010
-010010
-010010
-010110
-001010
-000000
+110000
+110000
+110000
+110000
+110000
+110000
+110000
+110000
 CHAR 251
-001110
-000000
-010010
-010010
-010010
-010110
-001010
-000000
+100000
+100000
+100000
+100000
+100000
+100000
+100000
+100000
 CHAR 252
-010010
+001010
 000000
 010010
 010010
@@ -9642,1387 +10604,33 @@ CHAR 252
 010110
 001010
 000000
+CHAR 253
+011000
+000100
+001000
+011100
+000000
+000000
+000000
+000000
+CHAR 254
+000000
+000000
+000000
+011110
+110010
+110011
+111110
+001111
 CHAR 255
-001010
-000000
+010010
+111111
 010010
 010010
+111111
 010010
-001110
-000100
-011000
-CHAR 402
-000010
-000101
-000100
-001110
-000100
-000100
-010100
-001000
-CHAR 915
-011110
-010010
-010000
-010000
-010000
-010000
-010000
 000000
-CHAR 920
-001100
-010010
-010010
-011110
-010010
-010010
-001100
 000000
-CHAR 931
-011111
-010000
-001000
-000100
-001000
-010000
-011111
-000000
-CHAR 934
-001110
-000100
-001110
-010001
-001110
-000100
-001110
-000000
-CHAR 937
-000000
-001110
-010001
-010001
-001010
-001010
-011011
-000000
-CHAR 948
-001100
-010000
-001000
-000100
-001110
-010010
-001100
-000000
-CHAR 949
-000000
-001110
-010000
-011110
-010000
-001110
-000000
-000000
-CHAR 960
-000000
-011111
-001010
-001010
-001010
-001010
-001010
-000000
-CHAR 963
-000000
-000000
-001111
-010010
-010010
-001100
-000000
-000000
-CHAR 964
-000000
-000000
-001010
-010100
-000100
-000100
-000100
-000000
-CHAR 966
-000000
-000100
-001110
-010101
-010101
-001110
-000100
-000000
-CHAR 8226
-000000
-000000
-000000
-001100
-001100
-000000
-000000
-000000
-CHAR 8252
-001010
-001010
-001010
-001010
-001010
-000000
-001010
-000000
-CHAR 8592
-000000
-000100
-001100
-011111
-001100
-000100
-000000
-000000
-CHAR 8593
-000100
-001110
-011111
-000100
-000100
-000100
-000100
-000000
-CHAR 8594
-000000
-000100
-000110
-011111
-000110
-000100
-000000
-000000
-CHAR 8595
-000100
-000100
-000100
-000100
-011111
-001110
-000100
-000000
-CHAR 8734
-000000
-000000
-001010
-010101
-010101
-001010
-000000
-000000
-CHAR 8735
-000000
-000000
-000000
-010000
-010000
-010000
-011111
-000000
-CHAR 8801
-000000
-011110
-000000
-011110
-000000
-011110
-000000
-000000
-CHAR 8804
-000010
-001100
-010000
-001100
-000010
-000000
-011110
-000000
-CHAR 8805
-010000
-001100
-000010
-001100
-010000
-000000
-011110
-000000
-CHAR 8962
-000100
-001110
-011011
-010001
-010001
-011111
-000000
-000000
-CHAR 8976
-000000
-000000
-011111
-010000
-010000
-010000
-000000
-000000
-CHAR 9472
-000000
-000000
-000000
-111111
-000000
-000000
-000000
-000000
-CHAR 9474
-000100
-000100
-000100
-000100
-000100
-000100
-000100
-000100
-CHAR 9488
-000000
-000000
-000000
-111100
-000100
-000100
-000100
-000100
-CHAR 9492
-000100
-000100
-000100
-000111
-000000
-000000
-000000
-000000
-CHAR 9500
-000100
-000100
-000100
-000111
-000100
-000100
-000100
-000100
-CHAR 9508
-000100
-000100
-000100
-111100
-000100
-000100
-000100
-000100
-CHAR 9516
-000000
-000000
-000000
-111111
-000100
-000100
-000100
-000100
-CHAR 9524
-000100
-000100
-000100
-111111
-000000
-000000
-000000
-000000
-CHAR 9532
-000100
-000100
-000100
-111111
-000100
-000100
-000100
-000100
-CHAR 9552
-000000
-111111
-000000
-111111
-000000
-000000
-000000
-000000
-CHAR 9553
-010100
-010100
-010100
-010100
-010100
-010100
-010100
-010100
-CHAR 9556
-000000
-011111
-010000
-010111
-010100
-010100
-010100
-010100
-CHAR 9557
-000000
-111100
-000100
-111100
-000100
-000100
-000100
-000100
-CHAR 9558
-000000
-000000
-000000
-111100
-010100
-010100
-010100
-010100
-CHAR 9559
-000000
-111100
-000100
-110100
-010100
-010100
-010100
-010100
-CHAR 9561
-010100
-010100
-010100
-011111
-000000
-000000
-000000
-000000
-CHAR 9562
-010100
-010111
-010000
-011111
-000000
-000000
-000000
-000000
-CHAR 9563
-000100
-111100
-000100
-111100
-000000
-000000
-000000
-000000
-CHAR 9564
-010100
-010100
-010100
-111100
-000000
-000000
-000000
-000000
-CHAR 9565
-010100
-110100
-000100
-111100
-000000
-000000
-000000
-000000
-CHAR 9566
-000100
-000111
-000100
-000111
-000100
-000100
-000100
-000100
-CHAR 9567
-010100
-010100
-010100
-010111
-010100
-010100
-010100
-010100
-CHAR 9568
-010100
-010111
-010000
-010111
-010100
-010100
-010100
-010100
-CHAR 9569
-000000
-000000
-010010
-010010
-010010
-011100
-010000
-010000
-CHAR 9570
-010100
-010100
-010100
-110100
-010100
-010100
-010100
-010100
-CHAR 9571
-010100
-110100
-000100
-110100
-010100
-010100
-010100
-010100
-CHAR 9572
-000000
-111111
-000000
-111111
-000100
-000100
-000100
-000100
-CHAR 9573
-000000
-000000
-000000
-111111
-010100
-010100
-010100
-010100
-CHAR 9574
-000000
-111111
-000000
-110111
-010100
-010100
-010100
-010100
-CHAR 9575
-000100
-111111
-000000
-111111
-000000
-000000
-000000
-000000
-CHAR 9576
-010100
-010100
-010100
-111111
-000000
-000000
-000000
-000000
-CHAR 9577
-010100
-110111
-000000
-111111
-000000
-000000
-000000
-000000
-CHAR 9580
-010100
-110111
-000000
-110111
-010100
-010100
-010100
-010100
-CHAR 9601
-000000
-000000
-000000
-000000
-000000
-000000
-000000
-111111
-CHAR 9602
-000000
-000000
-000000
-000000
-000000
-000000
-111111
-111111
-CHAR 9603
-000000
-000000
-000000
-000000
-000000
-111111
-111111
-111111
-CHAR 9604
-000000
-000000
-000000
-000000
-111111
-111111
-111111
-111111
-CHAR 9605
-000000
-000000
-000000
-111111
-111111
-111111
-111111
-111111
-CHAR 9606
-000000
-000000
-111111
-111111
-111111
-111111
-111111
-111111
-CHAR 9607
-000000
-111111
-111111
-111111
-111111
-111111
-111111
-111111
-CHAR 9608
-111111
-111111
-111111
-111111
-111111
-111111
-111111
-111111
-CHAR 9609
-111100
-111100
-111100
-111100
-111100
-111100
-111100
-111100
-CHAR 9610
-111100
-111100
-111100
-111100
-111100
-111100
-111100
-111100
-CHAR 9611
-111000
-111000
-111000
-111000
-111000
-111000
-111000
-111000
-CHAR 9613
-110000
-110000
-110000
-110000
-110000
-110000
-110000
-110000
-CHAR 9615
-100000
-100000
-100000
-100000
-100000
-100000
-100000
-100000
-CHAR 9617
-010101
-000000
-101010
-000000
-010101
-000000
-101010
-000000
-CHAR 9618
-010101
-101010
-010101
-101010
-010101
-101010
-010101
-101010
-CHAR 9619
-101010
-111111
-010101
-111111
-101010
-111111
-010101
-111111
-CHAR 9644
-000000
-000000
-000000
-000000
-000000
-011110
-011110
-000000
-CHAR 9650
-000100
-000100
-001110
-001110
-011111
-011111
-000000
-000000
-CHAR 9658
-001000
-001100
-001110
-001111
-001110
-001100
-001000
-000000
-CHAR 9660
-011111
-011111
-001110
-001110
-000100
-000100
-000000
-000000
-CHAR 9668
-000010
-000110
-001110
-011110
-001110
-000110
-000010
-000000
-CHAR 9675
-000000
-000000
-011110
-010010
-010010
-011110
-000000
-000000
-CHAR 9688
-111111
-111111
-111111
-110011
-110011
-111111
-111111
-111111
-CHAR 9689
-111111
-111111
-100001
-101101
-101101
-100001
-111111
-111111
-CHAR 9786
-001110
-010001
-011011
-010001
-010101
-010001
-001110
-000000
-CHAR 9787
-001110
-011111
-010101
-011111
-010001
-011111
-001110
-000000
-CHAR 9788
-000000
-010101
-001110
-011011
-001110
-010101
-000000
-000000
-CHAR 9792
-001110
-010001
-010001
-001110
-000100
-001110
-000100
-000000
-CHAR 9794
-000000
-000111
-000011
-001101
-010010
-010010
-001100
-000000
-CHAR 9824
-000000
-000100
-001110
-011111
-011111
-000100
-001110
-000000
-CHAR 9827
-000100
-001110
-001110
-000100
-011111
-011111
-000100
-000000
-CHAR 9829
-000000
-001010
-011111
-011111
-011111
-001110
-000100
-000000
-CHAR 9830
-000000
-000100
-001110
-011111
-011111
-001110
-000100
-000000
-CHAR 9834
-000100
-000110
-000101
-000100
-001100
-011100
-011000
-000000
-CHAR 9835
-000011
-001101
-001011
-001101
-001011
-011011
-011000
-000000
-</script>
-
-<!-- BORKSY HACKS -->
-<script type="text/javascript" id="borksyHacks">
-//borksy uses dist versions of hacks from the bitsy hacks repo now
-
-/**
-😌
-@file bitsymuse
-@summary A variety of Bitsy sound and music handlers
-@license MIT
-@author David Mowatt
-@version 19.1.2
-@requires Bitsy 7.10
-
-
-@description
-A hack that adds a variety of audio controls, including music that changes as you move between rooms.
-If the same song is played as you move between rooms, the audio file will continue playing.
-
-Check out https://kool.tools/bitsy/tools/bitsymuse-ui for a tool to help configure this hack.
-
-If you only want to play a single song as a background track,
-check out https://candle.itch.io/bitsy-audio for a simpler solution.
-
-HOW TO USE:
-1. Place your audio files somewhere relative to your bitsy html file (in the zip if you're uploading to itch.io)
-2. Copy-paste this script into a script tag after the bitsy source.
-3. Edit hackOptions below to set up the track list for rooms you move through.
-
-In addition to the track list, which will play audio based on the room id/name,
-you have access to the following commands you can add to dialogue:
-
-1. (soundeffectNow "<audio ID>") will play a sound without interrupting the music as soon as it is called in the dialogue
-2. (soundeffect "<audio ID>") will play a sound without interrupting the music once the dialogue box closes
-3. (musicNow "<audio ID>") will change the music as soon as it is called in the dialogue
-4. (music "<audio ID>") will change the music once the dialogue box closes
-
-You can call both musicNow and music in the same dialogue, to e.g. change the music while you speak to a character
-and then restart the regular room music once you stop speaking to them.
-You can also use a special ID ("S" by default) to Silence the music.
-
-By default, music tracks automatically restart from the beginning if you go back to a previous track.
-This can also be changed in the hackOptions below.
-*/
-this.hacks = this.hacks || {};
-(function (exports, bitsy) {
-'use strict';
-var hackOptions =  {
-// Put entries in this list for each audio file you want to use.
-// The key will be the id needed to play it in dialog tags and 
-// the musicByRoom options below, and the value will be the 
-// properties of the corresponding <audio> tag (e.g. src, loop, volume)
-// Note: you can add <audio> tags to the html manually if you prefer
-
-audio: {
-'levelSong': { src: './bensound-psychedelic.mp3', loop: true},
-	// Note: the entries below are examples that should be removed and replaced with your own audio files
-},
-	
-// Put entries in this list for every room ID or name that will 
-// change the music. If the player moves between rooms with the 
-// same audio ID, the music keeps playing seamlessly.
-
-// Undefined rooms will keep playing whatever music they were last playing.
-
-musicByRoom: {
-	// Note: the entries below are examples that should be removed and replaced with your own room -> audio id mappings
-desert 1: 'levelSong',
-desert 2: 'levelSong',
-desert 3: 'levelSong',
-},
-} ;
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-bitsy = bitsy || /*#__PURE__*/_interopDefaultLegacy(bitsy);
-
-/**
- * Helper used to replace code in a script tag based on a search regex.
- * To inject code without erasing original string, using capturing groups; e.g.
- * ```js
- * inject(/(some string)/,'injected before $1 injected after');
- * ```
- * @param searcher Regex to search and replace
- * @param replacer Replacer string/fn
- */
-function inject$1(searcher, replacer) {
-    // find the relevant script tag
-    var scriptTags = document.getElementsByTagName('script');
-    var scriptTag;
-    var code = '';
-    for (var i = 0; i < scriptTags.length; ++i) {
-        scriptTag = scriptTags[i];
-        if (!scriptTag.textContent)
-            continue;
-        var matchesSearch = scriptTag.textContent.search(searcher) !== -1;
-        var isCurrentScript = scriptTag === document.currentScript;
-        if (matchesSearch && !isCurrentScript) {
-            code = scriptTag.textContent;
-            break;
-        }
-    }
-    // error-handling
-    if (!code || !scriptTag) {
-        throw new Error('Couldn\'t find "' + searcher + '" in script tags');
-    }
-    // modify the content
-    code = code.replace(searcher, replacer);
-    // replace the old script tag with a new one using our modified code
-    var newScriptTag = document.createElement('script');
-    newScriptTag.textContent = code;
-    scriptTag.insertAdjacentElement('afterend', newScriptTag);
-    scriptTag.remove();
-}
-/**
- * Helper for getting an array with unique elements
- * @param  {Array} array Original array
- * @return {Array}       Copy of array, excluding duplicates
- */
-function unique(array) {
-    return array.filter(function (item, idx) {
-        return array.indexOf(item) === idx;
-    });
-}
-// Ex: inject(/(names.sprite.set\( name, id \);)/, '$1console.dir(names)');
-/** test */
-function kitsyInject(searcher, replacer) {
-    if (!kitsy.queuedInjectScripts.some(function (script) {
-        return searcher.toString() === script.searcher.toString() && replacer === script.replacer;
-    })) {
-        kitsy.queuedInjectScripts.push({
-            searcher: searcher,
-            replacer: replacer,
-        });
-    }
-    else {
-        console.warn('Ignored duplicate inject');
-    }
-}
-// Ex: before('load_game', function run() { alert('Loading!'); });
-//     before('show_text', function run(text) { return text.toUpperCase(); });
-//     before('show_text', function run(text, done) { done(text.toUpperCase()); });
-function before$1(targetFuncName, beforeFn) {
-    kitsy.queuedBeforeScripts[targetFuncName] = kitsy.queuedBeforeScripts[targetFuncName] || [];
-    kitsy.queuedBeforeScripts[targetFuncName].push(beforeFn);
-}
-// Ex: after('load_game', function run() { alert('Loaded!'); });
-function after$1(targetFuncName, afterFn) {
-    kitsy.queuedAfterScripts[targetFuncName] = kitsy.queuedAfterScripts[targetFuncName] || [];
-    kitsy.queuedAfterScripts[targetFuncName].push(afterFn);
-}
-function applyInjects() {
-    kitsy.queuedInjectScripts.forEach(function (injectScript) {
-        inject$1(injectScript.searcher, injectScript.replacer);
-    });
-}
-function applyHooks(root) {
-    var allHooks = unique(Object.keys(kitsy.queuedBeforeScripts).concat(Object.keys(kitsy.queuedAfterScripts)));
-    allHooks.forEach(applyHook.bind(this, root || window));
-}
-function applyHook(root, functionName) {
-    var functionNameSegments = functionName.split('.');
-    var obj = root;
-    while (functionNameSegments.length > 1) {
-        obj = obj[functionNameSegments.shift()];
-    }
-    var lastSegment = functionNameSegments[0];
-    var superFn = obj[lastSegment];
-    var superFnLength = superFn ? superFn.length : 0;
-    var functions = [];
-    // start with befores
-    functions = functions.concat(kitsy.queuedBeforeScripts[functionName] || []);
-    // then original
-    if (superFn) {
-        functions.push(superFn);
-    }
-    // then afters
-    functions = functions.concat(kitsy.queuedAfterScripts[functionName] || []);
-    // overwrite original with one which will call each in order
-    obj[lastSegment] = function () {
-        var returnVal;
-        var args = [].slice.call(arguments);
-        var i = 0;
-        function runBefore() {
-            // All outta functions? Finish
-            if (i === functions.length) {
-                return returnVal;
-            }
-            // Update args if provided.
-            if (arguments.length > 0) {
-                args = [].slice.call(arguments);
-            }
-            if (functions[i].length > superFnLength) {
-                // Assume funcs that accept more args than the original are
-                // async and accept a callback as an additional argument.
-                return functions[i++].apply(this, args.concat(runBefore.bind(this)));
-            }
-            // run synchronously
-            returnVal = functions[i++].apply(this, args);
-            if (returnVal && returnVal.length) {
-                args = returnVal;
-            }
-            return runBefore.apply(this, args);
-        }
-        return runBefore.apply(this, arguments);
-    };
-}
-/**
-@file kitsy-script-toolkit
-@summary Monkey-patching toolkit to make it easier and cleaner to run code before and after functions or to inject new code into script tags
-@license WTFPL (do WTF you want)
-@author Original by mildmojo; modified by Sean S. LeBlanc
-@version 19.1.2
-@requires Bitsy 7.10
-
-*/
-var kitsy = (window.kitsy = window.kitsy || {
-    queuedInjectScripts: [],
-    queuedBeforeScripts: {},
-    queuedAfterScripts: {},
-    inject: kitsyInject,
-    before: before$1,
-    after: after$1,
-    /**
-     * Applies all queued `inject` calls.
-     *
-     * An object that instantiates an class modified via injection will still refer to the original class,
-     * so make sure to reinitialize globals that refer to injected scripts before calling `applyHooks`.
-     */
-    applyInjects,
-    /** Apples all queued `before`/`after` calls. */
-    applyHooks,
-});
-
-var hooked = kitsy.hooked;
-if (!hooked) {
-	kitsy.hooked = true;
-	var oldStartFunc = bitsy.startExportedGame;
-	bitsy.startExportedGame = function doAllInjections() {
-		// Only do this once.
-		bitsy.startExportedGame = oldStartFunc;
-
-		// Rewrite scripts
-		kitsy.applyInjects();
-
-		// recreate the script and dialog objects so that they'll be
-		// referencing the code with injections instead of the original
-		bitsy.scriptModule = new bitsy.Script();
-		bitsy.scriptInterpreter = bitsy.scriptModule.CreateInterpreter();
-
-		bitsy.dialogModule = new bitsy.Dialog();
-		bitsy.dialogRenderer = bitsy.dialogModule.CreateRenderer();
-		bitsy.dialogBuffer = bitsy.dialogModule.CreateBuffer();
-		bitsy.renderer = new bitsy.TileRenderer(bitsy.tilesize);
-
-		// Hook everything
-		kitsy.applyHooks();
-
-		// reset callbacks using hacked functions
-		bitsy.bitsyOnUpdate(bitsy.update);
-		bitsy.bitsyOnQuit(bitsy.stopGame);
-		bitsy.bitsyOnLoad(bitsy.load_game);
-
-		// Start the game
-		bitsy.startExportedGame.apply(this, arguments);
-	};
-}
-
-/** @see kitsy.inject */
-var inject = kitsy.inject;
-/** @see kitsy.before */
-var before = kitsy.before;
-/** @see kitsy.after */
-var after = kitsy.after;
-
-// Rewrite custom functions' parentheses to curly braces for Bitsy's
-// interpreter. Unescape escaped parentheticals, too.
-function convertDialogTags(input, tag) {
-	return input.replace(new RegExp('\\\\?\\((' + tag + '(\\s+(".*?"|.+?))?)\\\\?\\)', 'g'), function (match, group) {
-		if (match.substr(0, 1) === '\\') {
-			return '(' + group + ')'; // Rewrite \(tag "..."|...\) to (tag "..."|...)
-		}
-		return '{' + group + '}'; // Rewrite (tag "..."|...) to {tag "..."|...}
-	});
-}
-
-function addDialogFunction(tag, fn) {
-	kitsy.dialogFunctions = kitsy.dialogFunctions || {};
-	if (kitsy.dialogFunctions[tag]) {
-		console.warn('The dialog function "' + tag + '" already exists.');
-		return;
-	}
-
-	// Hook into game load and rewrite custom functions in game data to Bitsy format.
-	before('parseWorld', function (gameData) {
-		return [convertDialogTags(gameData, tag)];
-	});
-
-	kitsy.dialogFunctions[tag] = fn;
-}
-
-function injectDialogTag(tag, code) {
-	inject(/(var functionMap = \{\};[^]*?)(this.HasFunction)/m, '$1\nfunctionMap["' + tag + '"] = ' + code + ';\n$2');
-}
-
-/**
- * Adds a custom dialog tag which executes the provided function.
- * For ease-of-use with the bitsy editor, tags can be written as
- * (tagname "parameters") in addition to the standard {tagname "parameters"}
- *
- * Function is executed immediately when the tag is reached.
- *
- * @param {string}   tag Name of tag
- * @param {Function} fn  Function to execute, with signature `function(environment, parameters, onReturn){}`
- *                       environment: provides access to SetVariable/GetVariable (among other things, see Environment in the bitsy source for more info)
- *                       parameters: array containing parameters as string in first element (i.e. `parameters[0]`)
- *                       onReturn: function to call with return value (just call `onReturn(null);` at the end of your function if your tag doesn't interact with the logic system)
- */
-function addDialogTag(tag, fn) {
-	addDialogFunction(tag, fn);
-	injectDialogTag(tag, 'kitsy.dialogFunctions["' + tag + '"]');
-}
-
-/**
- * Adds a custom dialog tag which executes the provided function.
- * For ease-of-use with the bitsy editor, tags can be written as
- * (tagname "parameters") in addition to the standard {tagname "parameters"}
- *
- * Function is executed after the dialog box.
- *
- * @param {string}   tag Name of tag
- * @param {Function} fn  Function to execute, with signature `function(environment, parameters){}`
- *                       environment: provides access to SetVariable/GetVariable (among other things, see Environment in the bitsy source for more info)
- *                       parameters: array containing parameters as string in first element (i.e. `parameters[0]`)
- */
-function addDeferredDialogTag(tag, fn) {
-	addDialogFunction(tag, fn);
-	bitsy.kitsy.deferredDialogFunctions = bitsy.kitsy.deferredDialogFunctions || {};
-	var deferred = (bitsy.kitsy.deferredDialogFunctions[tag] = []);
-	injectDialogTag(tag, 'function(e, p, o){ kitsy.deferredDialogFunctions["' + tag + '"].push({e:e,p:p}); o(null); }');
-	// Hook into the dialog finish event and execute the actual function
-	after('onExitDialog', function () {
-		while (deferred.length) {
-			var args = deferred.shift();
-			bitsy.kitsy.dialogFunctions[tag](args.e, args.p, args.o);
-		}
-	});
-	// Hook into the game reset and make sure data gets cleared
-	after('clearGameData', function () {
-		deferred.length = 0;
-	});
-}
-
-/**
- * Adds two custom dialog tags which execute the provided function,
- * one with the provided tagname executed after the dialog box,
- * and one suffixed with 'Now' executed immediately when the tag is reached.
- *
- * i.e. helper for the (exit)/(exitNow) pattern.
- *
- * @param {string}   tag Name of tag
- * @param {Function} fn  Function to execute, with signature `function(environment, parameters){}`
- *                       environment: provides access to SetVariable/GetVariable (among other things, see Environment in the bitsy source for more info)
- *                       parameters: array containing parameters as string in first element (i.e. `parameters[0]`)
- */
-function addDualDialogTag(tag, fn) {
-	addDialogTag(tag + 'Now', function (environment, parameters, onReturn) {
-		fn(environment, parameters);
-		onReturn(null);
-	});
-	addDeferredDialogTag(tag, fn);
-}
-
-/**
-@file utils
-@summary miscellaneous bitsy utilities
-@author Sean S. LeBlanc
-@version 19.1.2
-@requires Bitsy 7.10
-
-*/
-
-/**
- * Helper for getting room by name or id
- * @param {string} name id or name of room to return
- * @return {string} room, or undefined if it doesn't exist
- */
-function getRoom(name) {
-	var id = Object.prototype.hasOwnProperty.call(bitsy.room, name) ? name : bitsy.names.room[name];
-	return bitsy.room[id];
-}
-
-function createAudio(id, options) {
-	// delete duplicate
-	var el = document.getElementById(id);
-	if (el) el.remove();
-
-	// create element
-	el = document.createElement('audio');
-	var src = options.src;
-	el.id = id;
-	Object.assign(el, options);
-	if (typeof src !== 'string') {
-		el.src = null;
-		src.forEach(function (s) {
-			var sourceEl = document.createElement('source');
-			sourceEl.src = s;
-			sourceEl.type = 'audio/' + s.split('.').pop();
-			el.appendChild(sourceEl);
-		});
-	}
-	document.body.appendChild(el);
-	return el;
-}
-
-
-
-
-
-var audioElementsById = {};
-var currentMusic;
-var roomMusicFlag = null;
-
-after('load_game', function () {
-	var room;
-	// expand the map to include ids of rooms listed by name
-	Object.entries(hackOptions.musicByRoom).forEach(function (entry) {
-		room = getRoom(entry[0]);
-		if (room) {
-			hackOptions.musicByRoom[room.id] = entry[1];
-		}
-	});
-	// add audio tags from options
-	Object.entries(hackOptions.audio).forEach(function (entry) {
-		audioElementsById[entry[0]] = createAudio(entry[0], entry[1]);
-	});
-
-	// handle autoplay restrictions by playing then pausing
-	// every audio element on the first user interaction
-	function handleAutoPlayRestrictions() {
-		Object.values(audioElementsById).forEach(function (audio) {
-			audio.play();
-			// let the current song play
-			if (currentMusic === audio.id) {
-				return;
-			}
-			audio.pause();
-			audio.currentTime = 0;
-		});
-		document.body.removeEventListener('pointerup', handleAutoPlayRestrictions);
-		document.body.removeEventListener('keydown', handleAutoPlayRestrictions);
-	}
-
-	document.body.addEventListener('pointerup', handleAutoPlayRestrictions);
-	document.body.addEventListener('keydown', handleAutoPlayRestrictions);
-});
-
-function getAudio(id) {
-	var el = audioElementsById[id] || (audioElementsById[id] = document.getElementById(id));
-	if (!el) {
-		throw new Error("bitsymuse tried to use audio with id '" + id + "' but couldn't find one on the page!");
-	}
-	return el;
-}
-
-function playSound(soundParam) {
-	if (!soundParam) {
-		return;
-	}
-	getAudio(soundParam).play();
-}
-
-function changeMusic(newMusic) {
-	var audio;
-	// if we didn't get new music,
-	// or the music didn't change,
-	// there's no work to be done
-	if (!newMusic || newMusic === currentMusic) {
-		return;
-	}
-
-	// stop old music
-	if (currentMusic && currentMusic !== hackOptions.silenceId) {
-		audio = getAudio(currentMusic);
-		audio.pause();
-		if (!hackOptions.resume) {
-			audio.currentTime = 0.0;
-		}
-	}
-
-	// start new music
-	currentMusic = newMusic;
-	// special case: don't start anything new
-	if (newMusic === hackOptions.silenceId) {
-		return;
-	}
-	getAudio(newMusic).play();
-}
-
-after('drawRoom', function () {
-	if (roomMusicFlag !== bitsy.curRoom) {
-		changeMusic(hackOptions.musicByRoom[bitsy.curRoom]);
-		roomMusicFlag = bitsy.curRoom;
-	}
-});
-
-// Implement the dialog functions
-addDualDialogTag('music', function (environment, parameters) {
-	if (!parameters[0]) {
-		throw new Error('{music/musicNow} was missing parameters! Usage: {music/musicNow "track name"}');
-	}
-	changeMusic(parameters[0]);
-});
-
-addDualDialogTag('soundeffect', function (environment, parameters) {
-	if (!parameters[0]) {
-		throw new Error('{soundeffect/soundeffectNow} was missing parameters! Usage: {soundeffect/soundeffectNow "track name"}');
-	}
-	playSound(parameters[0]);
-});
-// End of (music) dialog function mod
-
-exports.hackOptions = hackOptions;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})(this.hacks.bitsymuse = this.hacks.bitsymuse || {}, window);
-
-
-
-</script>
-
-<script type="text/javascript" id="borksyAdditionalJS">
-
 </script>
 
 </head>
@@ -11030,8 +10638,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 <!-- DOCUMENT BODY -->
 <body onload='startExportedGame()'>
-<!-- GAME CANVAS -->
-<canvas id='game'></canvas>
+	<!-- GAME CANVAS -->
+	<canvas id='game'></canvas>
 </body>
 
 
