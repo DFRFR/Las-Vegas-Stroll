@@ -6,10 +6,10 @@
 
 <meta charset="UTF-8">
 
-<title>las_vegas_stroll_v3</title>
+<title>las_vegas_stroll_v1.3_</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
-las_vegas_stroll_v1.3
+las_vegas_stroll_v1.3_
 
 # BITSY VERSION 7.10
 
@@ -2555,7 +2555,14 @@ DLG sqj
 NAME bathroom dialogue dialog
 
 DLG sqk
-I'm the master conierge
+"""
+I'm the master concierge.{pg}{
+  - {item "prefix1"} == 0 ?
+    Oh dear you've run out of gold you know what that means
+  - else ?
+    The more the merrier!
+}{end}{pg}You foolishly thought you could escape.
+"""
 NAME master concierge dialog
 
 VAR a
@@ -2563,6 +2570,9 @@ VAR a
 
 VAR gold_left
 15
+
+VAR first_encounter
+0
 
 
 </script>
@@ -11586,6 +11596,7 @@ CHAR 255
 010010
 000000
 000000
+</script>
 </script>
 </script>
 
